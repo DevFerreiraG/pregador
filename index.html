@@ -1,37 +1,30 @@
-<!--
-  landing.html
-  Landing page ultra responsiva, moderna e de alto impacto visual, pronta para afiliados.
-  Link de pagamento: https://pay.cakto.com.br/7bv6dG8_92002?affiliate=YYupB7Sf
--->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Aproveite a oferta exclusiva e transforme sua vida! Produto digital revolucionário, garantia total. Últimas vagas!">
-  <title>Oferta Limitada | Transforme Sua Vida Agora</title>
+  <title>Transforme sua Vida | Oferta Exclusiva</title>
+  <meta name="description" content="Descubra o método comprovado para transformar sua vida hoje mesmo. Últimas vagas!">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;600;400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;700;600;400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --grad: linear-gradient(93deg, #38cfd9 10%, #3452ff 80%);
-      --bg: #f7f9fb;
-      --primary: #3452ff;
-      --cta: #0ccba0;
-      --cta-hover: #0abf93;
-      --danger: #f85757;
-      --shadow: 0 6px 32px 0 rgba(52,82,255,0.07);
-      --radius: 18px;
+      --grad: linear-gradient(100deg, #1ec6b6 5%, #1e40af 95%);
+      --primary: #1e40af;
+      --cta: #1ec6b6;
+      --cta-hover: #159e8a;
+      --danger: #f43f5e;
+      --bg: #f8fafc;
       --white: #fff;
-      --text: #212943;
-      --text-light: #54698d;
-      --gray: #e4e9f2;
+      --shadow: 0 6px 32px 0 rgba(30,64,175,0.09);
+      --radius: 18px;
+      --text: #222f46;
+      --text-light: #517093;
+      --gray: #e2e8f0;
     }
-    html, body { height: 100%; }
+    * {margin:0; padding:0; box-sizing: border-box;}
     body {
-      margin: 0;
       font-family: 'Inter', 'Montserrat', Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
@@ -40,13 +33,12 @@
     a { color: inherit; text-decoration: none; }
     header {
       position: fixed;
-      width: 100vw;
-      top: 0; left: 0;
-      z-index: 20;
+      top: 0; left: 0; width: 100vw;
       background: var(--white);
-      box-shadow: 0 2px 12px 0 rgba(52,82,255,0.03);
-      padding: 0.8rem 0;
-      transition: background 0.25s;
+      box-shadow: 0 2px 12px 0 rgba(30,64,175,0.06);
+      z-index: 99;
+      padding: 1rem 0;
+      transition: background 0.2s;
     }
     .container {
       width: 92%;
@@ -59,7 +51,7 @@
     .logo {
       font-family: 'Montserrat', sans-serif;
       font-weight: 800;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       background: var(--grad);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -73,7 +65,6 @@
     }
     nav a {
       font-weight: 600;
-      font-size: 1rem;
       color: var(--text-light);
       position: relative;
       transition: color .2s;
@@ -88,21 +79,16 @@
       border-radius: 1px;
       margin-top: 2px;
     }
-    nav a:hover, nav a.active {
-      color: var(--primary);
-    }
-    nav a:hover:after, nav a.active:after {
-      width: 100%;
-    }
+    nav a:hover, nav a.active { color: var(--primary);}
+    nav a:hover:after, nav a.active:after {width: 100%;}
     @media (max-width: 800px) {
-      .container { flex-direction: column; gap: 1rem;}
-      nav { gap: 1.2rem; }
+      .container {flex-direction: column; gap: 1rem;}
+      nav {gap: 1.1rem;}
     }
-    /* HERO SECTION */
     .hero-bg {
-      padding-top: 5.5rem;
+      padding-top: 6rem;
       background: var(--grad);
-      min-height: 580px;
+      min-height: 520px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -121,37 +107,38 @@
       flex: 1 1 330px;
       min-width: 320px;
       color: var(--white);
+      z-index: 2;
     }
     .hero-content h1 {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       font-weight: 800;
-      line-height: 1.1;
+      line-height: 1.15;
       margin-bottom: 1rem;
-      text-shadow: 0 2px 10px rgba(52,82,255,0.15);
+      text-shadow: 0 2px 10px rgba(30,64,175,0.15);
     }
     .hero-content .selo-oferta {
-      background: var(--cta);
+      background: var(--danger);
       color: #fff;
-      font-size: 1.05rem;
+      font-size: 1.01rem;
       font-weight: 700;
       display: inline-block;
       padding: .28em 1em;
       border-radius: 7px;
       margin-bottom: 1rem;
       letter-spacing: .5px;
-      box-shadow: 0 2px 12px 0 rgba(12,203,160,0.11);
+      box-shadow: 0 2px 12px 0 rgba(244,63,94,0.09);
       animation: pulse 2s infinite;
     }
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(12,203,160,0.2);}
-      70% { box-shadow: 0 0 0 16px rgba(12,203,160,0);}
-      100% { box-shadow: 0 0 0 0 rgba(12,203,160,0);}
+      0% { box-shadow: 0 0 0 0 rgba(244,63,94,0.12);}
+      70% { box-shadow: 0 0 0 14px rgba(244,63,94,0);}
+      100% { box-shadow: 0 0 0 0 rgba(244,63,94,0);}
     }
     .hero-content p {
-      font-size: 1.18rem;
-      font-weight: 400;
-      margin-bottom: 1.7rem;
-      color: #e4fbff;
+      font-size: 1.16rem;
+      margin-bottom: 1.5rem;
+      color: #e0e7ef;
+      text-shadow: 0 2px 10px rgba(30,64,175,0.11);
     }
     .hero-cta {
       display: flex;
@@ -161,14 +148,14 @@
     .hero-cta .cta-btn {
       background: var(--cta);
       color: #fff;
-      padding: 1.05rem 2.7rem;
+      padding: 1.07rem 2.2rem;
       border-radius: 12px;
-      font-size: 1.19rem;
+      font-size: 1.13rem;
       font-weight: 800;
       border: none;
       cursor: pointer;
       box-shadow: var(--shadow);
-      transition: background .16s, transform .14s;
+      transition: background .15s, transform .12s;
       outline: none;
     }
     .hero-cta .cta-btn:hover { background: var(--cta-hover); transform: scale(1.045);}
@@ -177,27 +164,35 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-width: 280px;
+      min-width: 220px;
+      position: relative;
+      z-index: 2;
     }
     .hero-img img {
-      width: 320px;
-      max-width: 98vw;
-      border-radius: 24px;
-      box-shadow: 0 8px 32px 0 rgba(52,82,255,0.17);
+      width: 340px;
+      max-width: 95vw;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(30,64,175,0.19);
       object-fit: cover;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 4/5;
+      border: 5px solid var(--white);
+      background: #fff;
       transition: transform .2s;
     }
     .hero-img img:hover { transform: scale(1.025);}
-    /* EMAIL CAPTURE */
+    @media (max-width: 700px) {
+      .hero {gap: 1rem;}
+      .hero-img img {width: 98vw; border-radius: 13px; border-width: 2.5px;}
+      .hero-content h1 {font-size: 2rem;}
+    }
     .email-capture {
       background: var(--white);
-      margin: -56px auto 0 auto;
+      margin: -44px auto 0 auto;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 2.2rem 1.2rem;
+      padding: 1.9rem 1rem 1.3rem 1rem;
       width: 96%;
-      max-width: 520px;
+      max-width: 440px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -206,191 +201,187 @@
     }
     .email-capture h3 {
       color: var(--primary);
-      font-size: 1.35rem;
-      margin-bottom: 1rem;
+      font-size: 1.17rem;
+      margin-bottom: .9rem;
       font-weight: 800;
+      text-align: center;
     }
     .email-capture form {
       display: flex;
-      gap: .6rem;
+      gap: .5rem;
       width: 100%;
-      margin-top: .6rem;
+      margin-top: .4rem;
     }
     .email-capture input[type="email"] {
       flex: 1;
-      padding: 0.9em 1em;
+      padding: 0.87em 1em;
       border-radius: 8px;
       border: 1.5px solid var(--gray);
-      font-size: 1.05rem;
+      font-size: 1rem;
       outline: none;
-      transition: border .15s;
+      transition: border .13s;
     }
     .email-capture input[type="email"]:focus { border-color: var(--primary);}
     .email-capture button {
       background: var(--primary);
       color: #fff;
       font-weight: 700;
-      padding: 0.9em 1.5em;
+      padding: 0.87em 1.2em;
       border-radius: 8px;
       border: none;
-      font-size: 1.07rem;
+      font-size: 1.01rem;
       cursor: pointer;
-      transition: background .17s;
+      transition: background .15s;
     }
-    .email-capture button:hover { background: #2338a6; }
+    .email-capture button:hover { background: #193270; }
     .email-capture .capture-msg {
-      margin-top: 0.7rem;
-      font-size: .99rem;
+      margin-top: 0.5rem;
+      font-size: .98rem;
       color: var(--cta);
       font-weight: 600;
       text-align: center;
     }
-    /* BENEFITS */
     .benefits-bg {
       background: #fff;
-      padding: 3.3rem 0 1.8rem 0;
+      padding: 2.3rem 0 1.3rem 0;
     }
     .benefits {
-      max-width: 1150px;
+      max-width: 1100px;
       margin: 0 auto;
       display: flex;
-      gap: 2rem;
+      gap: 1.7rem;
       justify-content: center;
       flex-wrap: wrap;
     }
     .benefit-card {
-      flex: 1 1 230px;
+      flex: 1 1 200px;
       background: var(--bg);
       border-radius: 14px;
       box-shadow: var(--shadow);
-      min-width: 235px;
-      max-width: 265px;
-      padding: 2.1rem 1.4rem 1.2rem 1.4rem;
+      min-width: 180px;
+      max-width: 260px;
+      padding: 1.6rem 1.1rem 1.1rem 1.1rem;
       text-align: center;
-      transition: transform .17s;
+      transition: transform .15s;
     }
-    .benefit-card:hover { transform: translateY(-7px) scale(1.03);}
+    .benefit-card:hover { transform: translateY(-5px) scale(1.03);}
     .benefit-card svg {
-      width: 42px;
-      height: 42px;
-      margin-bottom: .9rem;
+      width: 36px;
+      height: 36px;
+      margin-bottom: .8rem;
       color: var(--primary);
-      opacity: .97;
+      opacity: .93;
     }
     .benefit-card h4 {
       color: var(--primary);
       font-weight: 800;
-      font-size: 1.15rem;
-      margin-bottom: .68rem;
+      font-size: 1.12rem;
+      margin-bottom: .65rem;
     }
-    .benefit-card p { color: var(--text-light); font-size: 1.04rem;}
-    /* PROVA SOCIAL & SELOS */
+    .benefit-card p { color: var(--text-light); font-size: .99rem;}
     .proof-bg {
       background: var(--grad);
       color: #fff;
-      padding: 3.3rem 0 2.1rem 0;
+      padding: 2.7rem 0 1.1rem 0;
     }
     .proof-inner {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
     }
     .testimonials {
       display: flex;
-      gap: 2.3rem;
+      gap: 1.2rem;
       flex-wrap: wrap;
       justify-content: center;
       align-items: stretch;
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.2rem;
     }
     .testimonial-card {
-      flex: 1 1 240px;
-      min-width: 220px;
-      max-width: 320px;
-      background: rgba(255,255,255,0.92);
+      flex: 1 1 200px;
+      min-width: 180px;
+      max-width: 330px;
+      background: rgba(255,255,255,0.94);
       color: var(--text);
-      border-radius: 15px;
-      padding: 1.5rem 1.1rem;
+      border-radius: 13px;
+      padding: 1.1rem 1rem;
       box-shadow: var(--shadow);
-      margin-bottom: .7rem;
+      margin-bottom: .5rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       position: relative;
-      transition: box-shadow .16s;
+      transition: box-shadow .13s;
     }
     .testimonial-card .author {
       font-weight: bold;
-      margin-top: 1rem;
+      margin-top: 0.7rem;
       color: var(--primary);
-      font-size: 1.1rem;
-      display: flex; align-items: center; gap: 0.45rem;
+      font-size: 1rem;
+      display: flex; align-items: center; gap: 0.35rem;
     }
     .testimonial-card .author img {
-      width: 28px;
-      height: 28px;
+      width: 23px;
+      height: 23px;
       border-radius: 50%;
       object-fit: cover;
-      margin-right: 6px;
-      box-shadow: 0 2px 7px 0 rgba(52,82,255,0.12);
+      margin-right: 5px;
+      box-shadow: 0 2px 7px 0 rgba(30,64,175,0.13);
     }
     .selos {
       display: flex;
-      gap: 1.4rem;
+      gap: 1.1rem;
       justify-content: center;
-      margin: 2.3rem auto 0 auto;
+      margin: 1.5rem auto 0 auto;
       flex-wrap: wrap;
     }
     .selo {
       background: #fff;
-      border-radius: 13px;
-      box-shadow: 0 2px 16px 0 rgba(52,82,255,0.09);
-      padding: .82rem 2rem .77rem 2rem;
+      border-radius: 11px;
+      box-shadow: 0 2px 14px 0 rgba(30,64,175,0.09);
+      padding: .7rem 1.5rem .6rem 1.5rem;
       display: flex;
       align-items: center;
       gap: 0.7rem;
       font-weight: 700;
       color: var(--primary);
-      font-size: 1rem;
-      letter-spacing: .7px;
+      font-size: .96rem;
+      letter-spacing: .5px;
     }
     .selo svg {
-      width: 29px; height: 29px;
+      width: 23px; height: 23px;
       color: var(--cta);
-      opacity: 0.95;
+      opacity: 0.92;
     }
-    /* FAQ */
     .faq-bg {
       background: var(--white);
-      padding: 3.2rem 0 1.3rem 0;
+      padding: 2.2rem 0 1.3rem 0;
     }
     .faq-title {
       text-align: center;
-      font-size: 2rem;
+      font-size: 1.25rem;
       font-weight: 800;
       color: var(--primary);
-      margin-bottom: 2rem;
+      margin-bottom: 1.2rem;
     }
     .faq {
-      max-width: 780px;
+      max-width: 680px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: .7rem;
     }
     .faq-item {
       background: var(--bg);
-      border-radius: 12px;
+      border-radius: 10px;
       box-shadow: var(--shadow);
-      padding: 1.1rem 1.3rem;
+      padding: .8rem 1.1rem;
       cursor: pointer;
-      transition: background .16s;
+      transition: background .13s;
     }
-    .faq-item.open {
-      background: #e4e9f2;
-    }
+    .faq-item.open {background: #e2e8f0;}
     .faq-question {
       font-weight: 700;
-      font-size: 1.09rem;
+      font-size: .98rem;
       color: var(--primary);
       display: flex;
       justify-content: space-between;
@@ -400,72 +391,70 @@
     .faq-answer {
       max-height: 0;
       overflow: hidden;
-      transition: max-height .29s cubic-bezier(0.38, 0.5, 0.21, 1.07);
-      font-size: 1.05rem;
+      transition: max-height .22s cubic-bezier(0.38, 0.5, 0.21, 1.07);
+      font-size: .96rem;
       color: var(--text-light);
-      margin-top: .2rem;
+      margin-top: .15rem;
     }
     .faq-item.open .faq-answer {
-      max-height: 120px;
-      margin-top: 0.8rem;
+      max-height: 90px;
+      margin-top: 0.6rem;
     }
-    /* OFERTA LIMITADA & CONTADOR */
     .oferta-bg {
       background: var(--grad);
       color: #fff;
-      padding: 3.2rem 0 2.1rem 0;
+      padding: 2.3rem 0 1.3rem 0;
       text-align: center;
       position: relative;
     }
     .oferta-bg .oferta-title {
-      font-size: 2.1rem;
+      font-size: 1.6rem;
       font-weight: 800;
-      letter-spacing: .9px;
-      margin-bottom: 1rem;
+      margin-bottom: .7rem;
       color: #fff;
     }
     .contador {
-      font-size: 2.6rem;
+      font-size: 2.1rem;
       font-family: 'Montserrat', monospace;
       font-weight: 800;
       color: var(--danger);
-      background: rgba(255,255,255,0.19);
+      background: rgba(255,255,255,0.17);
       border-radius: 10px;
-      padding: .3em .9em;
+      padding: .25em .8em;
       display: inline-block;
-      margin-bottom: 1.1rem;
+      margin-bottom: .8rem;
       letter-spacing: 3px;
-      box-shadow: 0 2px 16px 0 rgba(248,87,87,0.08);
+      box-shadow: 0 2px 16px 0 rgba(244,63,94,0.08);
     }
     .oferta-bg p {
-      font-size: 1.22rem;
-      margin-bottom: 2.1rem;
-      color: #f6fafc;
+      font-size: 1.05rem;
+      margin-bottom: 1.1rem;
+      color: #e0f7fa;
     }
     .oferta-bg .cta-btn {
       background: var(--danger);
       color: #fff;
-      padding: 1.15rem 2.9rem;
-      border-radius: 14px;
-      font-size: 1.21rem;
+      padding: .9rem 2.1rem;
+      border-radius: 12px;
+      font-size: 1.11rem;
       font-weight: 800;
       border: none;
       cursor: pointer;
       box-shadow: var(--shadow);
-      transition: background .19s, transform .13s;
+      transition: background .16s, transform .11s;
       outline: none;
+      margin-top: .2rem;
     }
-    .oferta-bg .cta-btn:hover { background: #d73838; transform: scale(1.045);}
-    /* STICKY CTA MOBILE */
+    .oferta-bg .cta-btn:hover { background: #be2543; transform: scale(1.035);}
     .sticky-cta {
       display: none;
     }
     @media (max-width: 600px) {
-      .hero { gap: 1rem;}
-      .hero-img img { width: 96vw; border-radius: 16px;}
-      .benefits { flex-direction: column; gap: 1.2rem;}
-      .testimonials { flex-direction: column; gap: 1rem;}
-      .selos { flex-direction: column; gap: 0.9rem;}
+      .hero {gap: .7rem;}
+      .hero-img img {width: 99vw; border-radius: 10px; border-width:1.5px;}
+      .benefits { flex-direction: column; gap: .9rem;}
+      .testimonials { flex-direction: column; gap: .7rem;}
+      .selos { flex-direction: column; gap: .5rem;}
       .sticky-cta {
         display: flex;
         position: fixed;
@@ -474,47 +463,46 @@
         width: 100vw;
         background: var(--grad);
         z-index: 50;
-        box-shadow: 0 -3px 18px 0 rgba(52,82,255,0.09);
+        box-shadow: 0 -2px 10px 0 rgba(30,64,175,0.09);
         justify-content: center;
         align-items: center;
-        padding: .7rem 0 .6rem 0;
+        padding: .6rem 0 .5rem 0;
       }
       .sticky-cta .cta-btn {
-        padding: 1rem 1.3rem;
-        font-size: 1.13rem;
-        border-radius: 10px;
+        padding: .85rem 1.15rem;
+        font-size: 1rem;
+        border-radius: 9px;
         background: var(--danger);
       }
     }
-    /* FOOTER */
     footer {
-      background: #212943;
+      background: #222f46;
       color: #fff;
-      padding: 2.1rem 0 1.2rem 0;
+      padding: 1.5rem 0 .7rem 0;
       text-align: center;
-      font-size: 1rem;
-      margin-top: 2.1rem;
-      border-radius: 28px 28px 0 0;
+      font-size: .97rem;
+      margin-top: 1.3rem;
+      border-radius: 24px 24px 0 0;
     }
     .footer-links {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: .7rem;
+      gap: 1.1rem;
+      margin-bottom: .6rem;
       flex-wrap: wrap;
     }
     .footer-links a {
       color: #fff;
       opacity: 0.93;
-      font-size: 1.04rem;
+      font-size: .99rem;
       text-decoration: underline;
-      transition: opacity .15s;
+      transition: opacity .12s;
     }
     .footer-links a:hover { opacity: 1;}
     .footer-affiliate {
-      font-size: 0.93rem;
-      opacity: 0.73;
-      margin-top: 0.6rem;
+      font-size: 0.92rem;
+      opacity: 0.68;
+      margin-top: 0.4rem;
     }
   </style>
 </head>
@@ -536,20 +524,20 @@
     <div class="hero">
       <div class="hero-content">
         <div class="selo-oferta">OFERTA LIMITADA | 7 DIAS DE GARANTIA</div>
-        <h1>Transforme sua vida<br>com um único passo</h1>
-        <p>Já pensou em mudar sua rotina, conquistar resultados e surpreender a todos? Descubra o método mais recomendado de 2025, com suporte humanizado e garantia total.</p>
+        <h1>O passo que falta para transformar<br>seu futuro!</h1>
+        <p>Descubra o método comprovado por centenas de pessoas. Conquiste resultados reais com segurança, privacidade e garantia total.</p>
         <div class="hero-cta">
           <a href="#oferta" class="cta-btn">Quero Minha Vaga</a>
         </div>
       </div>
       <div class="hero-img">
-        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=500&q=80" alt="Pessoas felizes celebrando o sucesso">
+        <img src="https://raw.githubusercontent.com/DevFerreiraG/pregador/main/prego.jpg" alt="Sua foto de divulgação">
       </div>
     </div>
   </section>
 
   <section class="email-capture">
-    <h3>Receba conteúdo VIP e condições especiais:</h3>
+    <h3>Receba dicas VIP e condições exclusivas no seu e-mail:</h3>
     <form id="form-capture">
       <input type="email" id="email" placeholder="Seu melhor e-mail" required>
       <button type="submit">Quero Receber</button>
@@ -560,34 +548,24 @@
   <section class="benefits-bg" id="beneficios">
     <div class="benefits">
       <div class="benefit-card">
-        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
-          <path d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-        <h4>Resultados Rápidos</h4>
-        <p>Transformação já nos primeiros dias. Método validado por especialistas e clientes reais.</p>
+        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <h4>Acesso Imediato</h4>
+        <p>Conteúdo liberado após o pagamento. Transformação começa já no primeiro dia.</p>
       </div>
       <div class="benefit-card">
-        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M12 6v6l4 2"/>
-        </svg>
-        <h4>100% Online e Seguro</h4>
-        <p>Acesse do seu celular ou computador, com segurança e privacidade garantidas.</p>
+        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+        <h4>Garantia Total</h4>
+        <p>Teste por 7 dias. Não gostou? Seu dinheiro de volta, sem perguntas.</p>
       </div>
       <div class="benefit-card">
-        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
-          <path d="M5 13l4 4L19 7"/>
-        </svg>
-        <h4>Garantia Incondicional</h4>
-        <p>Experimente sem risco: 7 dias para pedir reembolso, caso não se surpreenda.</p>
+        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4z"/><path d="M6.88 14.88A7.963 7.963 0 0112 10c2.21 0 4.21.9 5.65 2.35M4 20h16"/></svg>
+        <h4>100% Online</h4>
+        <p>Acesse pelo celular ou computador, no seu tempo, de qualquer lugar.</p>
       </div>
       <div class="benefit-card">
-        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
-          <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4z"/>
-          <path d="M6.88 14.88A7.963 7.963 0 0112 10c2.21 0 4.21.9 5.65 2.35M4 20h16"/>
-        </svg>
+        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
         <h4>Suporte Humanizado</h4>
-        <p>Dúvidas? Fale diretamente com nossa equipe e tenha atendimento diferenciado.</p>
+        <p>Equipe real à disposição, antes e depois da sua compra.</p>
       </div>
     </div>
   </section>
@@ -596,22 +574,22 @@
     <div class="proof-inner">
       <div class="testimonials">
         <div class="testimonial-card">
-          <p>“Simplesmente mudou minha forma de ver a vida. Suporte maravilhoso e resultado real.”</p>
+          <p>“Mudei de vida em poucas semanas. Recomendo demais!”</p>
           <div class="author"><img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Ana S.">Ana S. - Belo Horizonte</div>
         </div>
         <div class="testimonial-card">
-          <p>“Fiz o teste sem esperar muito. Hoje recomendo para todos amigos!”</p>
+          <p>“Atendimento nota 10 e conteúdo fácil de entender. Superou minhas expectativas.”</p>
           <div class="author"><img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Bruno T.">Bruno T. - Salvador</div>
         </div>
         <div class="testimonial-card">
-          <p>“Equipe atenciosa e conteúdo fácil. Surpreendente, nota 10!”</p>
+          <p>“Senti diferença no primeiro mês. Obrigado pela atenção e suporte!”</p>
           <div class="author"><img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Fernanda L.">Fernanda L. - São Paulo</div>
         </div>
       </div>
       <div class="selos">
         <div class="selo">
           <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 20l9-5V7l-9-5-9 5v8z"/><path d="M12 4.25v15.5"/></svg>
-          7 Dias de Garantia Total
+          7 Dias de Garantia
         </div>
         <div class="selo">
           <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 12l-4 4-2-2"/></svg>
@@ -626,7 +604,7 @@
   </section>
 
   <section class="faq-bg" id="faq">
-    <div class="faq-title">Dúvidas Frequentes</div>
+    <div class="faq-title">Perguntas Frequentes</div>
     <div class="faq">
       <div class="faq-item">
         <div class="faq-question">
@@ -634,7 +612,7 @@
           <span>+</span>
         </div>
         <div class="faq-answer">
-          Você tem 7 dias para testar e, caso não fique satisfeito(a), devolvemos seu dinheiro sem perguntas.
+          Você tem 7 dias para testar. Não gostou? Devolvemos seu dinheiro sem perguntas!
         </div>
       </div>
       <div class="faq-item">
@@ -643,7 +621,7 @@
           <span>+</span>
         </div>
         <div class="faq-answer">
-          Sim! Após o pagamento, o acesso ao conteúdo é liberado na hora, 100% online.
+          Sim, o acesso é instantâneo e 100% online após a confirmação de pagamento.
         </div>
       </div>
       <div class="faq-item">
@@ -652,7 +630,7 @@
           <span>+</span>
         </div>
         <div class="faq-answer">
-          Nossa equipe está pronta para te ajudar pelo WhatsApp e e-mail, antes e depois da compra.
+          Você pode falar com nossa equipe pelo WhatsApp e e-mail antes e depois da compra.
         </div>
       </div>
       <div class="faq-item">
@@ -661,16 +639,16 @@
           <span>+</span>
         </div>
         <div class="faq-answer">
-          Sim! Todo o processo é feito em ambiente criptografado, através da Cakto.
+          Sim, o checkout é criptografado e seguro via Cakto.
         </div>
       </div>
     </div>
   </section>
 
   <section class="oferta-bg" id="oferta">
-    <div class="oferta-title">Garanta agora sua vaga exclusiva!</div>
+    <div class="oferta-title">Garanta sua vaga AGORA!</div>
     <div class="contador" id="contador">00:09:59</div>
-    <p>Oferta especial válida somente enquanto houver vagas. Não perca essa oportunidade única de mudar sua história.</p>
+    <p>Oferta especial válida por tempo limitado. Não perca sua chance de mudar de vida.</p>
     <a href="https://pay.cakto.com.br/7bv6dG8_92002?affiliate=YYupB7Sf" class="cta-btn" target="_blank" rel="noopener">QUERO TRANSFORMAR MINHA VIDA</a>
   </section>
 
@@ -687,38 +665,30 @@
     </div>
     &copy; 2025 Supere Sua Vida. Todos os direitos reservados.
     <div class="footer-affiliate">
-      Página de Afiliado: <a href="https://pay.cakto.com.br/7bv6dG8_92002?affiliate=YYupB7Sf" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">Acesse aqui</a>
+      Página do Afiliado: <a href="https://pay.cakto.com.br/7bv6dG8_92002?affiliate=YYupB7Sf" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">Acesse aqui</a>
     </div>
   </footer>
-
-  <!-- JS: Email Capture, FAQ, Contador -->
   <script>
-    // Navegação com highlight
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        navLinks.forEach(l => l.classList.remove('active'));
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
         this.classList.add('active');
       });
     });
-
-    // Captura de email (fake, só feedback visual)
     document.getElementById('form-capture').addEventListener('submit', function(e){
       e.preventDefault();
       const emailInput = document.getElementById('email');
       const email = emailInput.value.trim();
       const msg = document.getElementById('capture-msg');
       if (!email.match(/^[\w-.]+@[\w-]+\.[\w-]{2,}$/)) {
-        msg.textContent = "Por favor, digite um e-mail válido!";
-        msg.style.color = "#f85757";
+        msg.textContent = "Digite um e-mail válido!";
+        msg.style.color = "#f43f5e";
         return;
       }
-      msg.textContent = "E-mail cadastrado! Fique ligado no seu inbox 🚀";
+      msg.textContent = "E-mail cadastrado! Aguarde novidades 🚀";
       msg.style.color = "var(--cta)";
       emailInput.value = "";
     });
-
-    // FAQ animado
     document.querySelectorAll('.faq-item').forEach(item => {
       item.addEventListener('click', function() {
         this.classList.toggle('open');
@@ -732,11 +702,9 @@
         }
       });
     });
-
-    // Contador regressivo
     (function(){
       const contador = document.getElementById('contador');
-      let tempo = 599; // 9:59
+      let tempo = 599;
       function updateContador(){
         let m = Math.floor(tempo/60), s = tempo%60;
         contador.textContent = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
