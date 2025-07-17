@@ -1,0 +1,751 @@
+<!--
+  landing.html
+  Landing page ultra responsiva, moderna e de alto impacto visual, pronta para afiliados.
+  Link de pagamento: https://pay.cakto.com.br/7bv6dG8_92002?affiliate=YYupB7Sf
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aproveite a oferta exclusiva e transforme sua vida! Produto digital revolucionário, garantia total. Últimas vagas!">
+  <title>Oferta Limitada | Transforme Sua Vida Agora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;600;400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --grad: linear-gradient(93deg, #38cfd9 10%, #3452ff 80%);
+      --bg: #f7f9fb;
+      --primary: #3452ff;
+      --cta: #0ccba0;
+      --cta-hover: #0abf93;
+      --danger: #f85757;
+      --shadow: 0 6px 32px 0 rgba(52,82,255,0.07);
+      --radius: 18px;
+      --white: #fff;
+      --text: #212943;
+      --text-light: #54698d;
+      --gray: #e4e9f2;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      position: fixed;
+      width: 100vw;
+      top: 0; left: 0;
+      z-index: 20;
+      background: var(--white);
+      box-shadow: 0 2px 12px 0 rgba(52,82,255,0.03);
+      padding: 0.8rem 0;
+      transition: background 0.25s;
+    }
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.8rem;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-light);
+      position: relative;
+      transition: color .2s;
+    }
+    nav a:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width .2s;
+      border-radius: 1px;
+      margin-top: 2px;
+    }
+    nav a:hover, nav a.active {
+      color: var(--primary);
+    }
+    nav a:hover:after, nav a.active:after {
+      width: 100%;
+    }
+    @media (max-width: 800px) {
+      .container { flex-direction: column; gap: 1rem;}
+      nav { gap: 1.2rem; }
+    }
+    /* HERO SECTION */
+    .hero-bg {
+      padding-top: 5.5rem;
+      background: var(--grad);
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-content {
+      flex: 1 1 330px;
+      min-width: 320px;
+      color: var(--white);
+    }
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 10px rgba(52,82,255,0.15);
+    }
+    .hero-content .selo-oferta {
+      background: var(--cta);
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      display: inline-block;
+      padding: .28em 1em;
+      border-radius: 7px;
+      margin-bottom: 1rem;
+      letter-spacing: .5px;
+      box-shadow: 0 2px 12px 0 rgba(12,203,160,0.11);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(12,203,160,0.2);}
+      70% { box-shadow: 0 0 0 16px rgba(12,203,160,0);}
+      100% { box-shadow: 0 0 0 0 rgba(12,203,160,0);}
+    }
+    .hero-content p {
+      font-size: 1.18rem;
+      font-weight: 400;
+      margin-bottom: 1.7rem;
+      color: #e4fbff;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 1.1rem;
+      align-items: center;
+    }
+    .hero-cta .cta-btn {
+      background: var(--cta);
+      color: #fff;
+      padding: 1.05rem 2.7rem;
+      border-radius: 12px;
+      font-size: 1.19rem;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: background .16s, transform .14s;
+      outline: none;
+    }
+    .hero-cta .cta-btn:hover { background: var(--cta-hover); transform: scale(1.045);}
+    .hero-img {
+      flex: 1 1 320px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 280px;
+    }
+    .hero-img img {
+      width: 320px;
+      max-width: 98vw;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px 0 rgba(52,82,255,0.17);
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      transition: transform .2s;
+    }
+    .hero-img img:hover { transform: scale(1.025);}
+    /* EMAIL CAPTURE */
+    .email-capture {
+      background: var(--white);
+      margin: -56px auto 0 auto;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2.2rem 1.2rem;
+      width: 96%;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+    .email-capture h3 {
+      color: var(--primary);
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+    .email-capture form {
+      display: flex;
+      gap: .6rem;
+      width: 100%;
+      margin-top: .6rem;
+    }
+    .email-capture input[type="email"] {
+      flex: 1;
+      padding: 0.9em 1em;
+      border-radius: 8px;
+      border: 1.5px solid var(--gray);
+      font-size: 1.05rem;
+      outline: none;
+      transition: border .15s;
+    }
+    .email-capture input[type="email"]:focus { border-color: var(--primary);}
+    .email-capture button {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      padding: 0.9em 1.5em;
+      border-radius: 8px;
+      border: none;
+      font-size: 1.07rem;
+      cursor: pointer;
+      transition: background .17s;
+    }
+    .email-capture button:hover { background: #2338a6; }
+    .email-capture .capture-msg {
+      margin-top: 0.7rem;
+      font-size: .99rem;
+      color: var(--cta);
+      font-weight: 600;
+      text-align: center;
+    }
+    /* BENEFITS */
+    .benefits-bg {
+      background: #fff;
+      padding: 3.3rem 0 1.8rem 0;
+    }
+    .benefits {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .benefit-card {
+      flex: 1 1 230px;
+      background: var(--bg);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      min-width: 235px;
+      max-width: 265px;
+      padding: 2.1rem 1.4rem 1.2rem 1.4rem;
+      text-align: center;
+      transition: transform .17s;
+    }
+    .benefit-card:hover { transform: translateY(-7px) scale(1.03);}
+    .benefit-card svg {
+      width: 42px;
+      height: 42px;
+      margin-bottom: .9rem;
+      color: var(--primary);
+      opacity: .97;
+    }
+    .benefit-card h4 {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: .68rem;
+    }
+    .benefit-card p { color: var(--text-light); font-size: 1.04rem;}
+    /* PROVA SOCIAL & SELOS */
+    .proof-bg {
+      background: var(--grad);
+      color: #fff;
+      padding: 3.3rem 0 2.1rem 0;
+    }
+    .proof-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .testimonials {
+      display: flex;
+      gap: 2.3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      margin-bottom: 1.6rem;
+    }
+    .testimonial-card {
+      flex: 1 1 240px;
+      min-width: 220px;
+      max-width: 320px;
+      background: rgba(255,255,255,0.92);
+      color: var(--text);
+      border-radius: 15px;
+      padding: 1.5rem 1.1rem;
+      box-shadow: var(--shadow);
+      margin-bottom: .7rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      transition: box-shadow .16s;
+    }
+    .testimonial-card .author {
+      font-weight: bold;
+      margin-top: 1rem;
+      color: var(--primary);
+      font-size: 1.1rem;
+      display: flex; align-items: center; gap: 0.45rem;
+    }
+    .testimonial-card .author img {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 6px;
+      box-shadow: 0 2px 7px 0 rgba(52,82,255,0.12);
+    }
+    .selos {
+      display: flex;
+      gap: 1.4rem;
+      justify-content: center;
+      margin: 2.3rem auto 0 auto;
+      flex-wrap: wrap;
+    }
+    .selo {
+      background: #fff;
+      border-radius: 13px;
+      box-shadow: 0 2px 16px 0 rgba(52,82,255,0.09);
+      padding: .82rem 2rem .77rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1rem;
+      letter-spacing: .7px;
+    }
+    .selo svg {
+      width: 29px; height: 29px;
+      color: var(--cta);
+      opacity: 0.95;
+    }
+    /* FAQ */
+    .faq-bg {
+      background: var(--white);
+      padding: 3.2rem 0 1.3rem 0;
+    }
+    .faq-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2rem;
+    }
+    .faq {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .faq-item {
+      background: var(--bg);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 1.1rem 1.3rem;
+      cursor: pointer;
+      transition: background .16s;
+    }
+    .faq-item.open {
+      background: #e4e9f2;
+    }
+    .faq-question {
+      font-weight: 700;
+      font-size: 1.09rem;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .29s cubic-bezier(0.38, 0.5, 0.21, 1.07);
+      font-size: 1.05rem;
+      color: var(--text-light);
+      margin-top: .2rem;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 120px;
+      margin-top: 0.8rem;
+    }
+    /* OFERTA LIMITADA & CONTADOR */
+    .oferta-bg {
+      background: var(--grad);
+      color: #fff;
+      padding: 3.2rem 0 2.1rem 0;
+      text-align: center;
+      position: relative;
+    }
+    .oferta-bg .oferta-title {
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: .9px;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .contador {
+      font-size: 2.6rem;
+      font-family: 'Montserrat', monospace;
+      font-weight: 800;
+      color: var(--danger);
+      background: rgba(255,255,255,0.19);
+      border-radius: 10px;
+      padding: .3em .9em;
+      display: inline-block;
+      margin-bottom: 1.1rem;
+      letter-spacing: 3px;
+      box-shadow: 0 2px 16px 0 rgba(248,87,87,0.08);
+    }
+    .oferta-bg p {
+      font-size: 1.22rem;
+      margin-bottom: 2.1rem;
+      color: #f6fafc;
+    }
+    .oferta-bg .cta-btn {
+      background: var(--danger);
+      color: #fff;
+      padding: 1.15rem 2.9rem;
+      border-radius: 14px;
+      font-size: 1.21rem;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: background .19s, transform .13s;
+      outline: none;
+    }
+    .oferta-bg .cta-btn:hover { background: #d73838; transform: scale(1.045);}
+    /* STICKY CTA MOBILE */
+    .sticky-cta {
+      display: none;
+    }
+    @media (max-width: 600px) {
+      .hero { gap: 1rem;}
+      .hero-img img { width: 96vw; border-radius: 16px;}
+      .benefits { flex-direction: column; gap: 1.2rem;}
+      .testimonials { flex-direction: column; gap: 1rem;}
+      .selos { flex-direction: column; gap: 0.9rem;}
+      .sticky-cta {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        background: var(--grad);
+        z-index: 50;
+        box-shadow: 0 -3px 18px 0 rgba(52,82,255,0.09);
+        justify-content: center;
+        align-items: center;
+        padding: .7rem 0 .6rem 0;
+      }
+      .sticky-cta .cta-btn {
+        padding: 1rem 1.3rem;
+        font-size: 1.13rem;
+        border-radius: 10px;
+        background: var(--danger);
+      }
+    }
+    /* FOOTER */
+    footer {
+      background: #212943;
+      color: #fff;
+      padding: 2.1rem 0 1.2rem 0;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 2.1rem;
+      border-radius: 28px 28px 0 0;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: .7rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #fff;
+      opacity: 0.93;
+      font-size: 1.04rem;
+      text-decoration: underline;
+      transition: opacity .15s;
+    }
+    .footer-links a:hover { opacity: 1;}
+    .footer-affiliate {
+      font-size: 0.93rem;
+      opacity: 0.73;
+      margin-top: 0.6rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <span class="logo">SUPERE SUA VIDA</span>
+      <nav>
+        <a href="#inicio" class="active">Início</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#oferta">Oferta</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-bg" id="inicio">
+    <div class="hero">
+      <div class="hero-content">
+        <div class="selo-oferta">OFERTA LIMITADA | 7 DIAS DE GARANTIA</div>
+        <h1>Transforme sua vida<br>com um único passo</h1>
+        <p>Já pensou em mudar sua rotina, conquistar resultados e surpreender a todos? Descubra o método mais recomendado de 2025, com suporte humanizado e garantia total.</p>
+        <div class="hero-cta">
+          <a href="#oferta" class="cta-btn">Quero Minha Vaga</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=500&q=80" alt="Pessoas felizes celebrando o sucesso">
+      </div>
+    </div>
+  </section>
+
+  <section class="email-capture">
+    <h3>Receba conteúdo VIP e condições especiais:</h3>
+    <form id="form-capture">
+      <input type="email" id="email" placeholder="Seu melhor e-mail" required>
+      <button type="submit">Quero Receber</button>
+    </form>
+    <div class="capture-msg" id="capture-msg"></div>
+  </section>
+
+  <section class="benefits-bg" id="beneficios">
+    <div class="benefits">
+      <div class="benefit-card">
+        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+        <h4>Resultados Rápidos</h4>
+        <p>Transformação já nos primeiros dias. Método validado por especialistas e clientes reais.</p>
+      </div>
+      <div class="benefit-card">
+        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+        <h4>100% Online e Seguro</h4>
+        <p>Acesse do seu celular ou computador, com segurança e privacidade garantidas.</p>
+      </div>
+      <div class="benefit-card">
+        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+          <path d="M5 13l4 4L19 7"/>
+        </svg>
+        <h4>Garantia Incondicional</h4>
+        <p>Experimente sem risco: 7 dias para pedir reembolso, caso não se surpreenda.</p>
+      </div>
+      <div class="benefit-card">
+        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+          <path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4z"/>
+          <path d="M6.88 14.88A7.963 7.963 0 0112 10c2.21 0 4.21.9 5.65 2.35M4 20h16"/>
+        </svg>
+        <h4>Suporte Humanizado</h4>
+        <p>Dúvidas? Fale diretamente com nossa equipe e tenha atendimento diferenciado.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof-bg" id="depoimentos">
+    <div class="proof-inner">
+      <div class="testimonials">
+        <div class="testimonial-card">
+          <p>“Simplesmente mudou minha forma de ver a vida. Suporte maravilhoso e resultado real.”</p>
+          <div class="author"><img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Ana S.">Ana S. - Belo Horizonte</div>
+        </div>
+        <div class="testimonial-card">
+          <p>“Fiz o teste sem esperar muito. Hoje recomendo para todos amigos!”</p>
+          <div class="author"><img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Bruno T.">Bruno T. - Salvador</div>
+        </div>
+        <div class="testimonial-card">
+          <p>“Equipe atenciosa e conteúdo fácil. Surpreendente, nota 10!”</p>
+          <div class="author"><img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Fernanda L.">Fernanda L. - São Paulo</div>
+        </div>
+      </div>
+      <div class="selos">
+        <div class="selo">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 20l9-5V7l-9-5-9 5v8z"/><path d="M12 4.25v15.5"/></svg>
+          7 Dias de Garantia Total
+        </div>
+        <div class="selo">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 12l-4 4-2-2"/></svg>
+          Compra 100% Segura
+        </div>
+        <div class="selo">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-6-6"/><circle cx="10" cy="10" r="8"/></svg>
+          Privacidade Garantida
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-bg" id="faq">
+    <div class="faq-title">Dúvidas Frequentes</div>
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-question">
+          Como funciona a garantia?
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Você tem 7 dias para testar e, caso não fique satisfeito(a), devolvemos seu dinheiro sem perguntas.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          O acesso é imediato?
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Sim! Após o pagamento, o acesso ao conteúdo é liberado na hora, 100% online.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Como posso tirar dúvidas?
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Nossa equipe está pronta para te ajudar pelo WhatsApp e e-mail, antes e depois da compra.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          O pagamento é seguro?
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Sim! Todo o processo é feito em ambiente criptografado, através da Cakto.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="oferta-bg" id="oferta">
+    <div class="oferta-title">Garanta agora sua vaga exclusiva!</div>
+    <div class="contador" id="contador">00:09:59</div>
+    <p>Oferta especial válida somente enquanto houver vagas. Não perca essa oportunidade única de mudar sua história.</p>
+    <a href="https://pay.cakto.com.br/7bv6dG8_92002?affiliate=YYupB7Sf" class="cta-btn" target="_blank" rel="noopener">QUERO TRANSFORMAR MINHA VIDA</a>
+  </section>
+
+  <div class="sticky-cta">
+    <a href="https://pay.cakto.com.br/7bv6dG8_92002?affiliate=YYupB7Sf" class="cta-btn" target="_blank" rel="noopener">Garanta Sua Vaga Agora</a>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#beneficios">Benefícios</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">FAQ</a>
+      <a href="#oferta">Oferta</a>
+    </div>
+    &copy; 2025 Supere Sua Vida. Todos os direitos reservados.
+    <div class="footer-affiliate">
+      Página de Afiliado: <a href="https://pay.cakto.com.br/7bv6dG8_92002?affiliate=YYupB7Sf" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">Acesse aqui</a>
+    </div>
+  </footer>
+
+  <!-- JS: Email Capture, FAQ, Contador -->
+  <script>
+    // Navegação com highlight
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Captura de email (fake, só feedback visual)
+    document.getElementById('form-capture').addEventListener('submit', function(e){
+      e.preventDefault();
+      const emailInput = document.getElementById('email');
+      const email = emailInput.value.trim();
+      const msg = document.getElementById('capture-msg');
+      if (!email.match(/^[\w-.]+@[\w-]+\.[\w-]{2,}$/)) {
+        msg.textContent = "Por favor, digite um e-mail válido!";
+        msg.style.color = "#f85757";
+        return;
+      }
+      msg.textContent = "E-mail cadastrado! Fique ligado no seu inbox 🚀";
+      msg.style.color = "var(--cta)";
+      emailInput.value = "";
+    });
+
+    // FAQ animado
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', function() {
+        this.classList.toggle('open');
+        let ans = this.querySelector('.faq-answer');
+        if(this.classList.contains('open')) {
+          ans.style.maxHeight = ans.scrollHeight + 'px';
+          this.querySelector('.faq-question span').textContent = "-";
+        } else {
+          ans.style.maxHeight = "0";
+          this.querySelector('.faq-question span').textContent = "+";
+        }
+      });
+    });
+
+    // Contador regressivo
+    (function(){
+      const contador = document.getElementById('contador');
+      let tempo = 599; // 9:59
+      function updateContador(){
+        let m = Math.floor(tempo/60), s = tempo%60;
+        contador.textContent = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+        if(tempo > 0) tempo--;
+        else contador.textContent = "EXPIRADO";
+      }
+      setInterval(updateContador, 1000);
+      updateContador();
+    })();
+  </script>
+</body>
+</html>
