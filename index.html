@@ -1,719 +1,298 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Transforme sua Vida | Oferta Exclusiva</title>
-  <meta name="description" content="Descubra o método comprovado para transformar sua vida hoje mesmo. Últimas vagas!">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;700;600;400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --grad: linear-gradient(100deg, #1ec6b6 5%, #1e40af 95%);
-      --primary: #1e40af;
-      --cta: #1ec6b6;
-      --cta-hover: #159e8a;
-      --danger: #f43f5e;
-      --bg: #f8fafc;
-      --white: #fff;
-      --shadow: 0 6px 32px 0 rgba(30,64,175,0.09);
-      --radius: 18px;
-      --text: #222f46;
-      --text-light: #517093;
-      --gray: #e2e8f0;
-    }
-    * {margin:0; padding:0; box-sizing: border-box;}
-    body {
-      font-family: 'Inter', 'Montserrat', Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-    }
-    a { color: inherit; text-decoration: none; }
-    header {
-      position: fixed;
-      top: 0; left: 0; width: 100vw;
-      background: var(--white);
-      box-shadow: 0 2px 12px 0 rgba(30,64,175,0.06);
-      z-index: 99;
-      padding: 1rem 0;
-      transition: background 0.2s;
-    }
-    .container {
-      width: 92%;
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 1.6rem;
-      background: var(--grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
-      letter-spacing: 2px;
-    }
-    nav {
-      display: flex;
-      gap: 2rem;
-    }
-    nav a {
-      font-weight: 600;
-      color: var(--text-light);
-      position: relative;
-      transition: color .2s;
-    }
-    nav a:after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
-      background: var(--primary);
-      transition: width .2s;
-      border-radius: 1px;
-      margin-top: 2px;
-    }
-    nav a:hover, nav a.active { color: var(--primary);}
-    nav a:hover:after, nav a.active:after {width: 100%;}
-    @media (max-width: 800px) {
-      .container {flex-direction: column; gap: 1rem;}
-      nav {gap: 1.1rem;}
-    }
-    .hero-bg {
-      padding-top: 6rem;
-      background: var(--grad);
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .hero-content {
-      flex: 1 1 330px;
-      min-width: 320px;
-      color: var(--white);
-      z-index: 2;
-    }
-    .hero-content h1 {
-      font-size: 2.4rem;
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 1rem;
-      text-shadow: 0 2px 10px rgba(30,64,175,0.15);
-    }
-    .hero-content .selo-oferta {
-      background: var(--danger);
-      color: #fff;
-      font-size: 1.01rem;
-      font-weight: 700;
-      display: inline-block;
-      padding: .28em 1em;
-      border-radius: 7px;
-      margin-bottom: 1rem;
-      letter-spacing: .5px;
-      box-shadow: 0 2px 12px 0 rgba(244,63,94,0.09);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(244,63,94,0.12);}
-      70% { box-shadow: 0 0 0 14px rgba(244,63,94,0);}
-      100% { box-shadow: 0 0 0 0 rgba(244,63,94,0);}
-    }
-    .hero-content p {
-      font-size: 1.16rem;
-      margin-bottom: 1.5rem;
-      color: #e0e7ef;
-      text-shadow: 0 2px 10px rgba(30,64,175,0.11);
-    }
-    .hero-cta {
-      display: flex;
-      gap: 1.1rem;
-      align-items: center;
-    }
-    .hero-cta .cta-btn {
-      background: var(--cta);
-      color: #fff;
-      padding: 1.07rem 2.2rem;
-      border-radius: 12px;
-      font-size: 1.13rem;
-      font-weight: 800;
-      border: none;
-      cursor: pointer;
-      box-shadow: var(--shadow);
-      transition: background .15s, transform .12s;
-      outline: none;
-    }
-    .hero-cta .cta-btn:hover { background: var(--cta-hover); transform: scale(1.045);}
-    .hero-img {
-      flex: 1 1 320px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-width: 220px;
-      position: relative;
-      z-index: 2;
-    }
-    .hero-img img {
-      width: 340px;
-      max-width: 95vw;
-      border-radius: 20px;
-      box-shadow: 0 8px 32px 0 rgba(30,64,175,0.19);
-      object-fit: cover;
-      aspect-ratio: 4/5;
-      border: 5px solid var(--white);
-      background: #fff;
-      transition: transform .2s;
-    }
-    .hero-img img:hover { transform: scale(1.025);}
-    @media (max-width: 700px) {
-      .hero {gap: 1rem;}
-      .hero-img img {width: 98vw; border-radius: 13px; border-width: 2.5px;}
-      .hero-content h1 {font-size: 2rem;}
-    }
-    .email-capture {
-      background: var(--white);
-      margin: -44px auto 0 auto;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.9rem 1rem 1.3rem 1rem;
-      width: 96%;
-      max-width: 440px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      z-index: 10;
-    }
-    .email-capture h3 {
-      color: var(--primary);
-      font-size: 1.17rem;
-      margin-bottom: .9rem;
-      font-weight: 800;
-      text-align: center;
-    }
-    .email-capture form {
-      display: flex;
-      gap: .5rem;
-      width: 100%;
-      margin-top: .4rem;
-    }
-    .email-capture input[type="email"] {
-      flex: 1;
-      padding: 0.87em 1em;
-      border-radius: 8px;
-      border: 1.5px solid var(--gray);
-      font-size: 1rem;
-      outline: none;
-      transition: border .13s;
-    }
-    .email-capture input[type="email"]:focus { border-color: var(--primary);}
-    .email-capture button {
-      background: var(--primary);
-      color: #fff;
-      font-weight: 700;
-      padding: 0.87em 1.2em;
-      border-radius: 8px;
-      border: none;
-      font-size: 1.01rem;
-      cursor: pointer;
-      transition: background .15s;
-    }
-    .email-capture button:hover { background: #193270; }
-    .email-capture .capture-msg {
-      margin-top: 0.5rem;
-      font-size: .98rem;
-      color: var(--cta);
-      font-weight: 600;
-      text-align: center;
-    }
-    .benefits-bg {
-      background: #fff;
-      padding: 2.3rem 0 1.3rem 0;
-    }
-    .benefits {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      gap: 1.7rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .benefit-card {
-      flex: 1 1 200px;
-      background: var(--bg);
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-      min-width: 180px;
-      max-width: 260px;
-      padding: 1.6rem 1.1rem 1.1rem 1.1rem;
-      text-align: center;
-      transition: transform .15s;
-    }
-    .benefit-card:hover { transform: translateY(-5px) scale(1.03);}
-    .benefit-card svg {
-      width: 36px;
-      height: 36px;
-      margin-bottom: .8rem;
-      color: var(--primary);
-      opacity: .93;
-    }
-    .benefit-card h4 {
-      color: var(--primary);
-      font-weight: 800;
-      font-size: 1.12rem;
-      margin-bottom: .65rem;
-    }
-    .benefit-card p { color: var(--text-light); font-size: .99rem;}
-    .proof-bg {
-      background: var(--grad);
-      color: #fff;
-      padding: 2.7rem 0 1.1rem 0;
-    }
-    .proof-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .testimonials {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: stretch;
-      margin-bottom: 1.2rem;
-    }
-    .testimonial-card {
-      flex: 1 1 200px;
-      min-width: 180px;
-      max-width: 330px;
-      background: rgba(255,255,255,0.94);
-      color: var(--text);
-      border-radius: 13px;
-      padding: 1.1rem 1rem;
-      box-shadow: var(--shadow);
-      margin-bottom: .5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      position: relative;
-      transition: box-shadow .13s;
-    }
-    .testimonial-card .author {
-      font-weight: bold;
-      margin-top: 0.7rem;
-      color: var(--primary);
-      font-size: 1rem;
-      display: flex; align-items: center; gap: 0.35rem;
-    }
-    .testimonial-card .author img {
-      width: 23px;
-      height: 23px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 5px;
-      box-shadow: 0 2px 7px 0 rgba(30,64,175,0.13);
-    }
-    .selos {
-      display: flex;
-      gap: 1.1rem;
-      justify-content: center;
-      margin: 1.5rem auto 0 auto;
-      flex-wrap: wrap;
-    }
-    .selo {
-      background: #fff;
-      border-radius: 11px;
-      box-shadow: 0 2px 14px 0 rgba(30,64,175,0.09);
-      padding: .7rem 1.5rem .6rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      font-weight: 700;
-      color: var(--primary);
-      font-size: .96rem;
-      letter-spacing: .5px;
-    }
-    .selo svg {
-      width: 23px; height: 23px;
-      color: var(--cta);
-      opacity: 0.92;
-    }
-    .faq-bg {
-      background: var(--white);
-      padding: 2.2rem 0 1.3rem 0;
-    }
-    .faq-title {
-      text-align: center;
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 1.2rem;
-    }
-    .faq {
-      max-width: 680px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: .7rem;
-    }
-    .faq-item {
-      background: var(--bg);
-      border-radius: 10px;
-      box-shadow: var(--shadow);
-      padding: .8rem 1.1rem;
-      cursor: pointer;
-      transition: background .13s;
-    }
-    .faq-item.open {background: #e2e8f0;}
-    .faq-question {
-      font-weight: 700;
-      font-size: .98rem;
-      color: var(--primary);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      user-select: none;
-    }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .22s cubic-bezier(0.38, 0.5, 0.21, 1.07);
-      font-size: .96rem;
-      color: var(--text-light);
-      margin-top: .15rem;
-    }
-    .faq-item.open .faq-answer {
-      max-height: 90px;
-      margin-top: 0.6rem;
-    }
-    .oferta-bg {
-      background: var(--grad);
-      color: #fff;
-      padding: 2.3rem 0 1.3rem 0;
-      text-align: center;
-      position: relative;
-    }
-    .oferta-bg .oferta-title {
-      font-size: 1.6rem;
-      font-weight: 800;
-      margin-bottom: .7rem;
-      color: #fff;
-    }
-    .contador {
-      font-size: 2.1rem;
-      font-family: 'Montserrat', monospace;
-      font-weight: 800;
-      color: var(--danger);
-      background: rgba(255,255,255,0.17);
-      border-radius: 10px;
-      padding: .25em .8em;
-      display: inline-block;
-      margin-bottom: .8rem;
-      letter-spacing: 3px;
-      box-shadow: 0 2px 16px 0 rgba(244,63,94,0.08);
-    }
-    .oferta-bg p {
-      font-size: 1.05rem;
-      margin-bottom: 1.1rem;
-      color: #e0f7fa;
-    }
-    .oferta-bg .cta-btn {
-      background: var(--danger);
-      color: #fff;
-      padding: .9rem 2.1rem;
-      border-radius: 12px;
-      font-size: 1.11rem;
-      font-weight: 800;
-      border: none;
-      cursor: pointer;
-      box-shadow: var(--shadow);
-      transition: background .16s, transform .11s;
-      outline: none;
-      margin-top: .2rem;
-    }
-    .oferta-bg .cta-btn:hover { background: #be2543; transform: scale(1.035);}
-    .sticky-cta {
-      display: none;
-    }
-    @media (max-width: 600px) {
-      .hero {gap: .7rem;}
-      .hero-img img {width: 99vw; border-radius: 10px; border-width:1.5px;}
-      .benefits { flex-direction: column; gap: .9rem;}
-      .testimonials { flex-direction: column; gap: .7rem;}
-      .selos { flex-direction: column; gap: .5rem;}
-      .sticky-cta {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        background: var(--grad);
-        z-index: 50;
-        box-shadow: 0 -2px 10px 0 rgba(30,64,175,0.09);
-        justify-content: center;
-        align-items: center;
-        padding: .6rem 0 .5rem 0;
-      }
-      .sticky-cta .cta-btn {
-        padding: .85rem 1.15rem;
-        font-size: 1rem;
-        border-radius: 9px;
-        background: var(--danger);
-      }
-    }
-    footer {
-      background: #222f46;
-      color: #fff;
-      padding: 1.5rem 0 .7rem 0;
-      text-align: center;
-      font-size: .97rem;
-      margin-top: 1.3rem;
-      border-radius: 24px 24px 0 0;
-    }
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.1rem;
-      margin-bottom: .6rem;
-      flex-wrap: wrap;
-    }
-    .footer-links a {
-      color: #fff;
-      opacity: 0.93;
-      font-size: .99rem;
-      text-decoration: underline;
-      transition: opacity .12s;
-    }
-    .footer-links a:hover { opacity: 1;}
-    .footer-affiliate {
-      font-size: 0.92rem;
-      opacity: 0.68;
-      margin-top: 0.4rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <span class="logo">SUPERE SUA VIDA</span>
-      <nav>
-        <a href="#inicio" class="active">Início</a>
-        <a href="#beneficios">Benefícios</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#faq">FAQ</a>
-        <a href="#oferta">Oferta</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero-bg" id="inicio">
-    <div class="hero">
-      <div class="hero-content">
-        <div class="selo-oferta">OFERTA LIMITADA | 7 DIAS DE GARANTIA</div>
-        <h1>O passo que falta para transformar<br>seu futuro!</h1>
-        <p>Descubra o método comprovado por centenas de pessoas. Conquiste resultados reais com segurança, privacidade e garantia total.</p>
-        <div class="hero-cta">
-          <a href="#oferta" class="cta-btn">Quero Minha Vaga</a>
-        </div>
-      </div>
-      <div class="hero-img">
-        <img src="https://raw.githubusercontent.com/DevFerreiraG/pregador/main/prego.jpg" alt="Sua foto de divulgação">
-      </div>
-    </div>
-  </section>
-
-  <section class="email-capture">
-    <h3>Receba dicas VIP e condições exclusivas no seu e-mail:</h3>
-    <form id="form-capture">
-      <input type="email" id="email" placeholder="Seu melhor e-mail" required>
-      <button type="submit">Quero Receber</button>
-    </form>
-    <div class="capture-msg" id="capture-msg"></div>
-  </section>
-
-  <section class="benefits-bg" id="beneficios">
-    <div class="benefits">
-      <div class="benefit-card">
-        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        <h4>Acesso Imediato</h4>
-        <p>Conteúdo liberado após o pagamento. Transformação começa já no primeiro dia.</p>
-      </div>
-      <div class="benefit-card">
-        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-        <h4>Garantia Total</h4>
-        <p>Teste por 7 dias. Não gostou? Seu dinheiro de volta, sem perguntas.</p>
-      </div>
-      <div class="benefit-card">
-        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4z"/><path d="M6.88 14.88A7.963 7.963 0 0112 10c2.21 0 4.21.9 5.65 2.35M4 20h16"/></svg>
-        <h4>100% Online</h4>
-        <p>Acesse pelo celular ou computador, no seu tempo, de qualquer lugar.</p>
-      </div>
-      <div class="benefit-card">
-        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
-        <h4>Suporte Humanizado</h4>
-        <p>Equipe real à disposição, antes e depois da sua compra.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="proof-bg" id="depoimentos">
-    <div class="proof-inner">
-      <div class="testimonials">
-        <div class="testimonial-card">
-          <p>“Mudei de vida em poucas semanas. Recomendo demais!”</p>
-          <div class="author"><img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Ana S.">Ana S. - Belo Horizonte</div>
-        </div>
-        <div class="testimonial-card">
-          <p>“Atendimento nota 10 e conteúdo fácil de entender. Superou minhas expectativas.”</p>
-          <div class="author"><img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Bruno T.">Bruno T. - Salvador</div>
-        </div>
-        <div class="testimonial-card">
-          <p>“Senti diferença no primeiro mês. Obrigado pela atenção e suporte!”</p>
-          <div class="author"><img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Fernanda L.">Fernanda L. - São Paulo</div>
-        </div>
-      </div>
-      <div class="selos">
-        <div class="selo">
-          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 20l9-5V7l-9-5-9 5v8z"/><path d="M12 4.25v15.5"/></svg>
-          7 Dias de Garantia
-        </div>
-        <div class="selo">
-          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 12l-4 4-2-2"/></svg>
-          Compra 100% Segura
-        </div>
-        <div class="selo">
-          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-6-6"/><circle cx="10" cy="10" r="8"/></svg>
-          Privacidade Garantida
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="faq-bg" id="faq">
-    <div class="faq-title">Perguntas Frequentes</div>
-    <div class="faq">
-      <div class="faq-item">
-        <div class="faq-question">
-          Como funciona a garantia?
-          <span>+</span>
-        </div>
-        <div class="faq-answer">
-          Você tem 7 dias para testar. Não gostou? Devolvemos seu dinheiro sem perguntas!
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">
-          O acesso é imediato?
-          <span>+</span>
-        </div>
-        <div class="faq-answer">
-          Sim, o acesso é instantâneo e 100% online após a confirmação de pagamento.
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">
-          Como posso tirar dúvidas?
-          <span>+</span>
-        </div>
-        <div class="faq-answer">
-          Você pode falar com nossa equipe pelo WhatsApp e e-mail antes e depois da compra.
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">
-          O pagamento é seguro?
-          <span>+</span>
-        </div>
-        <div class="faq-answer">
-          Sim, o checkout é criptografado e seguro via Cakto.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="oferta-bg" id="oferta">
-    <div class="oferta-title">Garanta sua vaga AGORA!</div>
-    <div class="contador" id="contador">00:09:59</div>
-    <p>Oferta especial válida por tempo limitado. Não perca sua chance de mudar de vida.</p>
-    <a href="https://pay.cakto.com.br/7bv6dG8_92002?affiliate=YYupB7Sf" class="cta-btn" target="_blank" rel="noopener">QUERO TRANSFORMAR MINHA VIDA</a>
-  </section>
-
-  <div class="sticky-cta">
-    <a href="https://pay.cakto.com.br/7bv6dG8_92002?affiliate=YYupB7Sf" class="cta-btn" target="_blank" rel="noopener">Garanta Sua Vaga Agora</a>
-  </div>
-
-  <footer>
-    <div class="footer-links">
-      <a href="#beneficios">Benefícios</a>
-      <a href="#depoimentos">Depoimentos</a>
-      <a href="#faq">FAQ</a>
-      <a href="#oferta">Oferta</a>
-    </div>
-    &copy; 2025 Supere Sua Vida. Todos os direitos reservados.
-    <div class="footer-affiliate">
-      Página do Afiliado: <a href="https://pay.cakto.com.br/7bv6dG8_92002?affiliate=YYupB7Sf" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">Acesse aqui</a>
-    </div>
-  </footer>
-  <script>
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', function() {
-        document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-    document.getElementById('form-capture').addEventListener('submit', function(e){
-      e.preventDefault();
-      const emailInput = document.getElementById('email');
-      const email = emailInput.value.trim();
-      const msg = document.getElementById('capture-msg');
-      if (!email.match(/^[\w-.]+@[\w-]+\.[\w-]{2,}$/)) {
-        msg.textContent = "Digite um e-mail válido!";
-        msg.style.color = "#f43f5e";
-        return;
-      }
-      msg.textContent = "E-mail cadastrado! Aguarde novidades 🚀";
-      msg.style.color = "var(--cta)";
-      emailInput.value = "";
-    });
-    document.querySelectorAll('.faq-item').forEach(item => {
-      item.addEventListener('click', function() {
-        this.classList.toggle('open');
-        let ans = this.querySelector('.faq-answer');
-        if(this.classList.contains('open')) {
-          ans.style.maxHeight = ans.scrollHeight + 'px';
-          this.querySelector('.faq-question span').textContent = "-";
-        } else {
-          ans.style.maxHeight = "0";
-          this.querySelector('.faq-question span').textContent = "+";
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta Especial - Biblioteca do Pregador</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to apply the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
         }
-      });
-    });
-    (function(){
-      const contador = document.getElementById('contador');
-      let tempo = 599;
-      function updateContador(){
-        let m = Math.floor(tempo/60), s = tempo%60;
-        contador.textContent = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
-        if(tempo > 0) tempo--;
-        else contador.textContent = "EXPIRADO";
-      }
-      setInterval(updateContador, 1000);
-      updateContador();
-    })();
-  </script>
+        /* Custom gradient for buttons */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #16a34a, #22c55e, #16a34a);
+            background-size: 200% auto;
+            transition: background-position 0.5s;
+        }
+        .btn-gradient:hover {
+            background-position: right center;
+        }
+        /* Simple animation for emphasis */
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- CHECKOUT LINK -->
+    <!-- This variable holds your checkout link for easy updates -->
+    <script>
+        const checkoutLink = "https://pay.cakto.com.br/7bv6dG8_92002?affiliate=YYupB7Sf";
+    </script>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-yellow-400 text-center p-2 font-semibold text-gray-900">
+        🔥 Oferta especial por tempo limitado! Liberação imediata após o pagamento.
+    </div>
+
+    <!-- 1. HERO SECTION -->
+    <header class="bg-gray-900 text-white py-20 px-4" style="background-image: url('https://images.pexels.com/photos/267559/pexels-photo-267559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(17, 24, 39, 0.8);">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-xl md:text-2xl font-semibold text-green-400 mb-4">Você sente o chamado para pregar com mais profundidade e autoridade?</h2>
+            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">Transforme Suas Pregações e Impacte Vidas com a Ferramenta Definitiva Para Pregadores</h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+                Acesso imediato à mais completa coleção de esboços, comentários, dicionários e materiais para preparar sermões que tocam o coração e transformam a mente.
+            </p>
+            <a href="#" onclick="window.open(checkoutLink, '_blank')" class="btn-gradient text-white font-bold text-xl md:text-2xl py-4 px-10 rounded-lg shadow-xl inline-block pulse-animation">
+                QUERO ACESSO IMEDIATO À BIBLIOTECA
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. PROBLEM SECTION -->
+        <section class="py-16 md:py-24 px-4 bg-white">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">Preparar um Sermão Poderoso Toda Semana é um Desafio Enorme...</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Pain Point 1 -->
+                    <div class="bg-gray-100 p-6 rounded-xl shadow">
+                        <svg class="w-12 h-12 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-xl font-bold mb-2">Horas de Pesquisa</h3>
+                        <p>Gastar um tempo precioso buscando referências confiáveis e se sentir perdido online.</p>
+                    </div>
+                    <!-- Pain Point 2 -->
+                    <div class="bg-gray-100 p-6 rounded-xl shadow">
+                        <svg class="w-12 h-12 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        <h3 class="text-xl font-bold mb-2">Medo da Repetição</h3>
+                        <p>A sensação de que seus sermões estão se tornando repetitivos e sem novidade.</p>
+                    </div>
+                    <!-- Pain Point 3 -->
+                    <div class="bg-gray-100 p-6 rounded-xl shadow">
+                        <svg class="w-12 h-12 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>
+                        <h3 class="text-xl font-bold mb-2">Falta de Organização</h3>
+                        <p>Consultar dezenas de livros sem ter um lugar único e confiável para encontrar tudo.</p>
+                    </div>
+                    <!-- Pain Point 4 -->
+                    <div class="bg-gray-100 p-6 rounded-xl shadow">
+                        <svg class="w-12 h-12 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-xl font-bold mb-2">Insegurança no Púlpito</h3>
+                        <p>A dúvida se a sua mensagem está realmente profunda e bem fundamentada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SOLUTION SECTION -->
+        <section class="py-16 md:py-24 px-4">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Apresentamos a <span class="text-green-600">BIBLIOTECA DO PREGADOR</span></h2>
+                    <p class="text-lg mb-8">O seu arsenal teológico completo, 100% digital e organizado para você acessar de onde estiver. Tenha, na palma da sua mão, tudo o que você precisa para construir sermões do zero, com profundidade bíblica e confiança inabalável.</p>
+                    <div class="space-y-4 text-left">
+                        <div class="flex items-start"><div class="flex-shrink-0"><svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></div><p><span class="font-bold">Milhares de Esboços de Sermões:</span> Prontos para usar e adaptar.</p></div>
+                        <div class="flex items-start"><div class="flex-shrink-0"><svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></div><p><span class="font-bold">Dicionários Bíblicos e Teológicos:</span> Entenda o significado profundo de cada termo.</p></div>
+                        <div class="flex items-start"><div class="flex-shrink-0"><svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></div><p><span class="font-bold">Comentários Versículo por Versículo:</span> Obtenha insights de grandes teólogos.</p></div>
+                        <div class="flex items-start"><div class="flex-shrink-0"><svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></div><p><span class="font-bold">Ilustrações e Mapas Bíblicos:</span> Conecte-se com a congregação e contextualize.</p></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://raw.githubusercontent.com/DevFerreiraG/pregador/main/prego.jpg" alt="Mockup da Biblioteca do Pregador" class="rounded-xl shadow-2xl w-full">
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. OFFER SECTION -->
+        <section class="py-16 md:py-24 px-4 bg-gray-900 text-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">OFERTA POR TEMPO LIMITADO</h2>
+                <p class="text-lg text-gray-300 mb-8">Ter acesso a uma biblioteca física com todo esse material custaria facilmente mais de R$ 2.000,00. Mas hoje, sua chance é única.</p>
+                <div class="bg-white text-gray-900 rounded-xl p-8 md:p-12 shadow-2xl">
+                    <p class="text-xl">De <span class="line-through">R$ 497,00</span> por apenas:</p>
+                    <p class="text-5xl md:text-7xl font-black my-4 text-green-600">R$ 197,00</p>
+                    <p class="text-xl font-bold mb-6">ou 12x de R$ 19,66* <span class="font-normal text-sm">(*com acréscimo)</span></p>
+                    <a href="#" onclick="window.open(checkoutLink, '_blank')" class="btn-gradient text-white font-bold text-xl md:text-2xl py-4 px-10 rounded-lg shadow-xl inline-block w-full max-w-md pulse-animation">
+                        SIM, EU QUERO MINHA BIBLIOTECA AGORA!
+                    </a>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-400">Esta oferta especial termina em:</h3>
+                    <div id="countdown" class="text-4xl font-bold tracking-wider space-x-4">
+                        <span id="days">00</span>:<span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. BONUSES SECTION -->
+        <section class="py-16 md:py-24 px-4 bg-white">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">E para ficar ainda melhor...</h2>
+                <p class="text-lg mb-12">Ao garantir seu acesso **HOJE**, você pode adicionar um pacote de bônus exclusivos no checkout por um valor simbólico!</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                    <!-- Bonus 1 -->
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg border-t-4 border-green-500">
+                        <h3 class="text-xl font-bold">BÔNUS #1: 100 BÍBLIAS DE ESTUDO</h3>
+                        <p class="my-2">Um acervo digital com 100 versões e traduções da Bíblia para consulta rápida.</p>
+                        <p class="font-bold"><span class="line-through text-red-500">R$ 50,00</span> <span class="text-green-600 text-lg">Adicione por R$ 14,90</span></p>
+                    </div>
+                    <!-- Bonus 2 -->
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg border-t-4 border-green-500">
+                        <h3 class="text-xl font-bold">BÔNUS #2: APOCALIPSE REVELADO</h3>
+                        <p class="my-2">Um estudo completo e detalhado sobre o livro de Apocalipse, de forma clara e bíblica.</p>
+                        <p class="font-bold"><span class="line-through text-red-500">R$ 40,00</span> <span class="text-green-600 text-lg">Adicione por R$ 10,00</span></p>
+                    </div>
+                    <!-- Bonus 3 -->
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg border-t-4 border-green-500">
+                        <h3 class="text-xl font-bold">BÔNUS #3: CURSO PREGANDO COM AUTORIDADE</h3>
+                        <p class="my-2">Aprenda as chaves da postura, voz e estrutura para pregar com uma autoridade que vem do céu.</p>
+                        <p class="font-bold"><span class="line-through text-red-500">R$ 147,00</span> <span class="text-green-600 text-lg">Adicione por R$ 12,90</span></p>
+                    </div>
+                    <!-- Bonus 4 -->
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg border-t-4 border-green-500">
+                        <h3 class="text-xl font-bold">BÔNUS #4: PACK ARTES GOSPEL - CANVA</h3>
+                        <p class="my-2">Centenas de templates prontos no Canva para divulgar seus cultos de forma profissional.</p>
+                        <p class="font-bold"><span class="line-through text-red-500">R$ 74,00</span> <span class="text-green-600 text-lg">Adicione por R$ 20,00</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. TESTIMONIALS SECTION -->
+        <section class="py-16 md:py-24 px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Quem Comprou, Recomenda</h2>
+                <div class="space-y-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto de Daniel Souza" class="w-24 h-24 rounded-full object-cover">
+                        <div>
+                            <p class="text-lg italic">"Foi o melhor material que já comprei. A Biblioteca do Pregador é completa, didática e transformou minha forma de estudar e pregar. Valeu cada centavo do investimento!"</p>
+                            <p class="font-bold text-right mt-4">- Daniel Souza, Pastor</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto de Rafael Silva" class="w-24 h-24 rounded-full object-cover">
+                        <div>
+                            <p class="text-lg italic">"Estava lutando contra o bloqueio criativo e a falta de tempo. Este material me deu não apenas esboços, mas a confiança de que estou entregando o meu melhor no púlpito. É 100% completo!"</p>
+                            <p class="font-bold text-right mt-4">- Rafael Silva, Líder de Jovens</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7. GUARANTEE SECTION -->
+        <section class="py-16 md:py-24 px-4 bg-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <svg class="w-24 h-24 mx-auto mb-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 20.944a11.955 11.955 0 0118 0c.001-.06.003-.12.003-.18a11.955 11.955 0 01-2.382-8.128z"></path></svg>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Sua Satisfação ou Seu Dinheiro de Volta!</h2>
+                <p class="text-lg max-w-3xl mx-auto mb-6">Temos total confiança na transformação que a Biblioteca do Pregador trará para o seu ministério. Por isso, oferecemos uma **Garantia Incondicional de 7 Dias.** Acesse todo o material, e se por qualquer motivo você não sentir que este é o melhor investimento que já fez, basta nos enviar um único e-mail e devolveremos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+                <p class="font-bold text-xl">O risco é todo nosso.</p>
+            </div>
+        </section>
+
+        <!-- 8. FINAL CTA SECTION -->
+        <section class="py-16 md:py-24 px-4 bg-gray-900 text-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Não Deixe Essa Oportunidade Passar</h2>
+                <p class="text-lg text-gray-300 mb-8">Tome a decisão de investir no seu ministério hoje e tenha acesso a uma ferramenta que vai te economizar tempo, te dar profundidade e te transformar em um pregador ainda mais impactante.</p>
+                <div class="bg-white text-gray-900 rounded-xl p-8 md:p-12 shadow-2xl inline-block">
+                    <p class="text-xl">Valor total em produtos: <span class="line-through">R$ 808,00</span></p>
+                    <p class="text-xl mt-2">Leve tudo hoje por apenas:</p>
+                    <p class="text-5xl md:text-7xl font-black my-4 text-green-600">R$ 197,00</p>
+                    <a href="#" onclick="window.open(checkoutLink, '_blank')" class="btn-gradient text-white font-bold text-xl md:text-2xl py-4 px-10 rounded-lg shadow-xl inline-block w-full max-w-md pulse-animation">
+                        GARANTIR MEU ACESSO COM DESCONTO
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center text-sm text-gray-400">
+            <p class="mb-4">
+                <a href="#" class="hover:text-white">Política de Privacidade</a> | 
+                <a href="#" class="hover:text-white">Termos de Serviço</a> | 
+                <a href="#" class="hover:text-white">Termos de Compra</a>
+            </p>
+            <p class="mb-2">Pagamento seguro processado por <span class="font-bold">Cakto</span>. Este site é protegido pelo reCAPTCHA do Google.</p>
+            <p>&copy; <span id="currentYear"></span> BIBLIOTECA DO PREGADOR - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT SECTION -->
+    <script>
+        // --- Countdown Timer ---
+        function startCountdown() {
+            // Set countdown duration: 2 days
+            const countdownDuration = 2 * 24 * 60 * 60 * 1000;
+            const endTime = new Date().getTime() + countdownDuration;
+
+            const countdownElement = document.getElementById('countdown');
+            if (!countdownElement) return;
+
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    countdownElement.innerHTML = "OFERTA ENCERRADA";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysEl.textContent = String(days).padStart(2, '0');
+                hoursEl.textContent = String(hours).padStart(2, '0');
+                minutesEl.textContent = String(minutes).padStart(2, '0');
+                secondsEl.textContent = String(seconds).padStart(2, '0');
+
+            }, 1000);
+        }
+
+        // --- Set Current Year in Footer ---
+        function setYear() {
+            const yearElement = document.getElementById('currentYear');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        }
+        
+        // --- Run scripts on page load ---
+        document.addEventListener('DOMContentLoaded', () => {
+            startCountdown();
+            setYear();
+        });
+    </script>
+
 </body>
 </html>
